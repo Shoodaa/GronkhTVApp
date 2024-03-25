@@ -8,14 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var discovery = Discovery()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            NavigationStack {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(discovery.discovery) { video in
+                            NavigationLink {
+                                VideoDetailView(episode_number: video.episode)
+                            } label: {
+                                VideoComponent(singleVideo: video)
+                            }
+                        }
+                    }
+                }
+                .background(Color("DarkestPurple"))
+            }
+            .tabItem {
+                Image(systemName: "house")
+                Text("Home")
+            }
+            Text("Videothek")
+                .tabItem {
+                    Image(systemName: "play")
+                    Text("Videothek")
+                }
+            Text("Suche")
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Suche")
+                }
         }
-        .padding()
+        .task {
+            discovery = await Bundle.main.asyncFetchAndDecode("https://api.gronkh.tv/v1/video/discovery/recent")
+        }
     }
 }
 

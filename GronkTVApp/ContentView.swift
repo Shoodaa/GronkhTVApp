@@ -44,6 +44,13 @@ struct ContentView: View {
         .task {
             discovery = await Bundle.main.asyncFetchAndDecode("https://api.gronkh.tv/v1/video/discovery/recent")
         }
+        .onAppear {
+            // correct the transparency bug for Tab bars
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithOpaqueBackground()
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

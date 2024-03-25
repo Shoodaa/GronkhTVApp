@@ -34,7 +34,6 @@ struct VideoComponent: View {
                 ZStack {
                     Rectangle()
                         .frame(width: 120, height: 40)
-                        .background(Color("GreyPurple"))
                         .clipShape(
                             .rect(
                                 topLeadingRadius: 8,
@@ -44,7 +43,8 @@ struct VideoComponent: View {
                             )
                         )
                         .foregroundStyle(Color("DarkestPurple"))
-                        .opacity(0.5)
+                        .opacity(0.7)
+                    
                     HStack {
                         Text("🕔")
                         Text(String(singleVideo.formatted_length))
@@ -56,7 +56,6 @@ struct VideoComponent: View {
                 ZStack {
                     Rectangle()
                         .frame(width: 60, height: 40)
-                        .background(Color("GreyPurple"))
                         .clipShape(
                             .rect(
                                 topLeadingRadius: 8,
@@ -66,7 +65,8 @@ struct VideoComponent: View {
                             )
                         )
                         .foregroundStyle(Color("DarkestPurple"))
-                        .opacity(0.5)
+                        .opacity(0.7)
+                    
                     HStack {
                         Text("#" + String(singleVideo.episode))
                             .foregroundStyle(Color("White"))
@@ -74,6 +74,7 @@ struct VideoComponent: View {
                 }
                 .offset(x: 140, y: 80)
             }
+            
             ZStack {
                 Rectangle()
                     .clipShape(
@@ -82,8 +83,10 @@ struct VideoComponent: View {
                             bottomTrailingRadius: 16
                         )
                     )
-                    .frame(width: .infinity, height: 150)
+                    .padding(.horizontal)
+                    .frame(width: Helper.screenWidth, height: 150)
                     .foregroundStyle(Color("GreyPurple"))
+                
                 Text(singleVideo.title)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)

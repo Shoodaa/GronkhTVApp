@@ -20,9 +20,10 @@ struct VideoDetailView: View {
             VStack(alignment: .leading) {
                     if videoUrl != "" {
                         MainVideoPlayer(url: videoUrl)
+                            .frame(width: Helper.screenWidth)
                         ZStack {
                             Rectangle()
-                                .frame(width: .infinity)
+                                .frame(width: Helper.screenWidth)
                                 .foregroundStyle(Color("DarkPurple"))
                                 .clipShape(
                                     .rect(topLeadingRadius: 0, bottomLeadingRadius: 16, bottomTrailingRadius: 16, topTrailingRadius: 0)
@@ -52,6 +53,7 @@ struct VideoDetailView: View {
                         
                     } else {
                         ProgressView()
+                            .frame(width: Helper.screenWidth)
                             .task {
                                 await getVideoURL()
                             }

@@ -20,6 +20,7 @@
 		B09806B82BAF1768000A7D0F /* VideoPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806B72BAF1768000A7D0F /* VideoPlaylist.swift */; };
 		B09806BA2BAF2313000A7D0F /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806B92BAF2313000A7D0F /* VideoDetail.swift */; };
 		B09806BC2BB03710000A7D0F /* AsyncTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806BB2BB03710000A7D0F /* AsyncTestView.swift */; };
+		B09806BE2BB20E2D000A7D0F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806BD2BB20E2D000A7D0F /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B09806B72BAF1768000A7D0F /* VideoPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlaylist.swift; sourceTree = "<group>"; };
 		B09806B92BAF2313000A7D0F /* VideoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetail.swift; sourceTree = "<group>"; };
 		B09806BB2BB03710000A7D0F /* AsyncTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTestView.swift; sourceTree = "<group>"; };
+		B09806BD2BB20E2D000A7D0F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				B09187922BACBE41008B44D1 /* Assets.xcassets */,
 				B09187942BACBE41008B44D1 /* Preview Content */,
 				B09187A82BAEDF90008B44D1 /* Extensions.swift */,
+				B09806BD2BB20E2D000A7D0F /* Helper.swift */,
 			);
 			path = GronkTVApp;
 			sourceTree = "<group>";
@@ -103,11 +106,19 @@
 		B091879D2BACBE72008B44D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B09806BF2BB2114E000A7D0F /* Modifier */,
 				B09187A22BAED50F008B44D1 /* VideoComponent.swift */,
 				B09806B52BAF0435000A7D0F /* VideoDetailView.swift */,
 				B09806BB2BB03710000A7D0F /* AsyncTestView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B09806BF2BB2114E000A7D0F /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				B091878F2BACBE40008B44D1 /* GronkTVAppApp.swift in Sources */,
 				B09806B82BAF1768000A7D0F /* VideoPlaylist.swift in Sources */,
 				B09187A92BAEDF90008B44D1 /* Extensions.swift in Sources */,
+				B09806BE2BB20E2D000A7D0F /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

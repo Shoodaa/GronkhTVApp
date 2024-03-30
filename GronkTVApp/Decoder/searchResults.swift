@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct SearchResults: Codable {
+    var results: singleResult?
+    
+    struct singleResult: Codable {
+        var videos: [RecentVideos]?
+    }
+}

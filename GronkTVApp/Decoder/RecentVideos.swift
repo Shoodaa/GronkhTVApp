@@ -14,7 +14,7 @@ struct Discovery: Codable {
 struct RecentVideos: Codable, Identifiable {
     var id: Int = 0
     var title: String = ""
-    var season: Int = 0
+    var season: Int?
     var episode: Int = 0
     var created_at: String = ""
     var video_length: Int = 0

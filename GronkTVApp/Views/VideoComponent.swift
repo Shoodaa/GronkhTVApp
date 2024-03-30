@@ -90,7 +90,7 @@ struct VideoComponent: View {
                 Text(singleVideo.title)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
-                    .padding()
+                    .padding(.horizontal, 32)
             }
         }
         .padding()

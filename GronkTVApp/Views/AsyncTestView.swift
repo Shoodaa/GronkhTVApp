@@ -7,30 +7,16 @@
 
 import SwiftUI
 
-struct TestAPI: Codable {
-    var count: Int = 0
-    var entries: [Entry] = []
-    
-    struct Entry: Codable {
-        var API: String = ""
-        var Description: String = ""
-        var Auth: String = ""
-        var HTTPS: Bool = true
-        var Cors: String = ""
-        var Link: String = ""
-        var Category: String = ""
-    }
-}
-
 struct AsyncTestView: View {
-    @State private var test = VideoPlaylist()
+    @State private var test = SearchResults()
     
     var body: some View {
         VStack {
-            Text(String(test.playlist_url))
+            Text("N/A")
         }
         .task {
-            test = await Bundle.main.asyncFetchAndDecode("https://api.gronkh.tv/v1/video/playlist?episode=835")
+            test = await Bundle.main.asyncFetchAndDecode("https://api.gronkh.tv/v1/search?first=16&query=minecraft")
+            print(test)
         }
     }
 }

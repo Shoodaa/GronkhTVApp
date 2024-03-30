@@ -30,12 +30,14 @@ struct ContentView: View {
                 Image(systemName: "house")
                 Text("Home")
             }
+            
             Text("Videothek")
                 .tabItem {
                     Image(systemName: "play")
                     Text("Videothek")
                 }
-            Text("Suche")
+            
+            SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Suche")

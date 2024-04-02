@@ -15,15 +15,16 @@ struct SearchView: View {
     var body: some View {
         NavigationStack {
             if !searchText.isEmpty {
-                List {
+                ScrollView {
                     if let video = searchResults.results?.videos {
-                        ForEach(video) { single in
-                            NavigationLink {
-                                VideoDetailView(episode_number: single.episode)
-                            } label: {
-                                VideoComponent(singleVideo: single)
+                        LazyVStack {
+                            ForEach(video) { single in
+                                NavigationLink {
+                                    VideoDetailView(episode_number: single.episode)
+                                } label: {
+                                    VideoComponent(singleVideo: single)
+                                }
                             }
-                            //VideoComponent(singleVideo: $0)
                         }
                     }
                 }

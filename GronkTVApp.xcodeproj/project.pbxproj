@@ -23,6 +23,7 @@
 		B09806BE2BB20E2D000A7D0F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806BD2BB20E2D000A7D0F /* Helper.swift */; };
 		B09806C72BB80DF0000A7D0F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806C62BB80DF0000A7D0F /* SearchView.swift */; };
 		B09806C92BB80FCD000A7D0F /* searchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806C82BB80FCD000A7D0F /* searchResults.swift */; };
+		B09806CB2BBB4428000A7D0F /* TagCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09806CA2BBB4428000A7D0F /* TagCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B09806BD2BB20E2D000A7D0F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B09806C62BB80DF0000A7D0F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B09806C82BB80FCD000A7D0F /* searchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResults.swift; sourceTree = "<group>"; };
+		B09806CA2BBB4428000A7D0F /* TagCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCard.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		B09806BF2BB2114E000A7D0F /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
+				B09806CA2BBB4428000A7D0F /* TagCard.swift */,
 			);
 			path = Modifier;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				B091879F2BACBED3008B44D1 /* Bundle-Decoder.swift in Sources */,
 				B09806B62BAF0435000A7D0F /* VideoDetailView.swift in Sources */,
 				B09806BA2BAF2313000A7D0F /* VideoDetail.swift in Sources */,
+				B09806CB2BBB4428000A7D0F /* TagCard.swift in Sources */,
 				B09806C72BB80DF0000A7D0F /* SearchView.swift in Sources */,
 				B091878F2BACBE40008B44D1 /* GronkTVAppApp.swift in Sources */,
 				B09806B82BAF1768000A7D0F /* VideoPlaylist.swift in Sources */,

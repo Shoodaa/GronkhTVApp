@@ -36,16 +36,10 @@ struct VideoDetailView: View {
                                 Divider()
                                 
                                 Text("Stream Folge \(videoDetails.episode)")
-                                    .foregroundStyle(Color("White"))
-                                    .padding(6)
-                                    .background(Color("GreyPurple"))
-                                    .clipShape(.rect(topLeadingRadius: 6, bottomLeadingRadius: 6, bottomTrailingRadius: 6, topTrailingRadius: 6))
+                                    .tagCard()
                                 
                                 Text("\(videoDetails.views) Aufrufe")
-                                    .foregroundStyle(Color("White"))
-                                    .padding(6)
-                                    .background(Color("GreyPurple"))
-                                    .clipShape(.rect(topLeadingRadius: 6, bottomLeadingRadius: 6, bottomTrailingRadius: 6, topTrailingRadius: 6))
+                                    .tagCard()
                                 
                             }
                             .padding()

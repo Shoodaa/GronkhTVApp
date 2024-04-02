@@ -31,13 +31,17 @@ import Foundation
 
 extension Bundle {
     func asyncFetchAndDecode<T: Decodable>(_ urlString: String) async -> T {
+        print(urlString)
         
         guard let url = URL(string: urlString) else {
             fatalError("Invalid URL")
         }
         
+        print(url)
+        
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
+            print("Data: \(data)")
             if let decodedResponse = try? JSONDecoder().decode(T.self, from: data) {
                 return decodedResponse
             }

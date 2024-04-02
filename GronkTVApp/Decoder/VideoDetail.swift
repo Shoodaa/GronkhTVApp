@@ -22,7 +22,7 @@ struct VideoDetail: Codable, Identifiable {
     var vtt_url: String = ""
     var sprite_url: String = ""
     var tags: [String]?
-    var chat_replay: String = ""
+    var chat_replay: String?
     var widgets: [String]?
     var chapters: [Chapter]?
     var next: Next?
